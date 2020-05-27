@@ -329,17 +329,20 @@ footer a {
     margin-top: 2em;
 }
 
-.section__title--projects{
-    text-align: center;
-}
-
 .project-img{
     box-shadow: var(--shadow);
+    transition: all .2s ease-in-out; 
+}
+
+.project-img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .project-title{
     margin: 0.25em 0.25em;
-    background: var(--clr-accent);
+    background: var(--clr-accent); 
+    padding: 0 0.25em;
 }
 
 .project-description{
@@ -352,6 +355,26 @@ footer a {
         grid-area: title;
         justify-self: center;
     }
+    
+    .project-title1{
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 1;
+        text-align: right;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 1em);
+    }
+    
+    .project-title2{
+        align-self: start;
+        grid-column: 1 / 3;
+        grid-row: 1;
+        text-align: left;
+        position: relative;
+        right: -2em;
+        width: calc(100% + 2em);
+    }
 
     .project-description{
         grid-area: description;
@@ -360,6 +383,7 @@ footer a {
     .project-img{
         grid-area: img;
         align-self: center;
+        margin-top: 1em;
     }
 
     .project1{
