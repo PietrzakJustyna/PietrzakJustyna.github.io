@@ -340,69 +340,48 @@ footer a {
 }
 
 .project-title{
-    margin: 0.25em 0.25em;
+    margin: 1.25em auto 0.5em auto;
     background: var(--clr-accent); 
-    padding: 0 0.25em;
+    padding: 0 0 0.1em 0.1em;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-h3);
+    line-height: 1.6;
 }
 
 .project-description{
-    margin: 0.1em auto;
+    margin: 1em;
 }
 
+.tutorial-link:link,
+.tutorial-link:visited{
+    color: var(--clr-light);
+}
+
+.tutorial-link:hover{
+    color: var(--clr-accent);
+}
+
+
 @media (min-width:900px){
-
-    .project-title{
-        grid-area: title;
-        justify-self: center;
-    }
-    
-    .project-title1{
-        align-self: start;
-        grid-column: -1 / 1;
-        grid-row: 1;
-        text-align: right;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 1em);
-    }
-    
-    .project-title2{
-        align-self: start;
-        grid-column: 1 / 3;
-        grid-row: 1;
-        text-align: left;
-        position: relative;
-        right: -2em;
-        width: calc(100% + 2em);
-    }
-
-    .project-description{
-        grid-area: description;
-    }
-
     .project-img{
-        grid-area: img;
-        align-self: center;
-        margin-top: 1em;
+        margin: 1.5em;
+        width: 17em;
     }
 
-    .project1{
-        display: grid;
-        grid-template-areas: 
-        "img title"
-        "img description";
+    .project1 .project-img{
+        float: left;
+    }   
+
+    .project2 .project-img{
+        float: right;
+    }   
+
+    .project-title1{
+        text-align: left;
     }
 
-    .project2{
-        display: grid;
-        grid-template-areas: 
-        "title img"
-        "description img";
+    .project-title2{
+        text-align: right;
     }
-
-    .project{
-        column-gap: 1em;
-        margin-bottom: 2em;
-    }
-
 }
